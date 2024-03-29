@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import '../styles/globals.css'; // Import global styles
-
+import { ThemeProvider } from "@/components/theme-provider"
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
 
@@ -17,7 +17,16 @@ const MyApp = ({ Component, pageProps }) => {
     }
   }, [router.pathname]);
 
-  return <Component {...pageProps} />;
+  return (
+    <ThemeProvider
+    attribute="class"
+    defaultTheme="system"
+    enableSystem
+    disableTransitionOnChange
+  >
+   <Component {...pageProps} />
+  </ThemeProvider>
+ );
 };
 
 export default MyApp;
