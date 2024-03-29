@@ -30,12 +30,14 @@ const Login = () => {
       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <ModeToggle />
+          <Link href="/" >
           <img
             src="/assets/logo.png" // Path to your image relative to the public directory
             alt="Your Company Logo"
             className="mx-auto h-20 w-auto"
   
           />
+          </Link>
           <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight">
             Login to your account
           </h2>

@@ -12,9 +12,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" >
       <body className={inter.className}>
+    
         <main> {children}</main>
        
-        <Toaster position="top-right" autoClose={3000} hideProgressBar />
+        <Toaster  />
       </body>
     </html>
 
